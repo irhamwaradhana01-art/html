@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas level 2</title>
+    <link rel="stylesheet" href="tugas 1.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><span>portofolio</span></div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Halo, Saya <span>Muhammad Irham Waradhana</span></h1>
+            <p>ini adalah hasil dari pekerjaan saya .</p>
+            <a href="#portfolio" class="btn-primary">Lihat Karya</a>
+        </div>
+    </header>
+
+    <section id="skills" class="skills">
+        <h2 class="section-title">Keahlian Saya</h2>
+        <div class="skills-container">
+            <div class="skill-card">HTML</div>
+            <div class="skill-card">CSS</div>
+            <div class="skiil-card">JavaScript</div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2 class="section-title">Project Terbaru</h2>
+        <div class="grid-container">
+            <div class="grid-item">Project 1</div>
+            <div class="grid-item">Project 2</div>
+            <div class="grid-item">Project 3</div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Hubungi Saya</h2>
+        <div class="form-wrapper">
+            <form>
+                <div class="input-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" placeholder="isi nama">
+                </div>
+                <div class="input-group">
+                    <label>Email / No. HP</label>
+                    <input type="text" placeholder="Email atau no hp">
+                </div>
+                <div class="input-group">
+                    <label>Pesan</label>
+                    <textarea rows="5" placeholder=" isi pesan"></textarea>
+                </div>
+                <button type="button" class="btn-submit">Kirim </button>
+            </form>
+        </div>
+    </section>
+
+<style>
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body { 
+background-color: #f4f7f6; 
+color: #333; 
+line-height: 1.6;
+ }
+
+nav {
+    display: flex;
+	justify-content: space-between; 
+	align-items: center;
+    padding: 20px 10%;
+	background: #fff;
+	position: sticky; 
+	top: 0; z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo { font-size:
+ 1.5rem; 
+ font-weight: bold; 
+ }
+.logo span { 
+color: #007bff; 
+}
+nav ul {
+	display: flex; 
+	list-style: none; 
+	gap: 20px; 
+	}
+nav ul li a { 
+	text-decoration: none;
+	color: #333; 
+	transition: 0.3s; }
+	
+nav ul li a:hover { color: #007bff; }
+
+.hero {
+    height: 70vh; 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    text-align: center;
+	background: linear-gradient(135deg, #007bff, #6610f2);
+	color: white;
+}
+.hero h1 span { 
+display: block;
+ font-size: 3rem; }
+
+.btn-primary {
+    display: inline-block;
+	margin-top: 25px; 
+	padding: 12px 30px;
+    background-color: #ff5733;
+    color: white; 
+	text-decoration: none; 
+	border-radius: 50px;
+    font-weight: bold;
+	transition: all 0.3s ease; 
+}
+.btn-primary:hover {
+    background-color: #e64a19; 
+    transform: scale(1.1); 
+}
+
+
+.section-title { text-align: center;
+ margin: 40px 0;
+ position: relative;
+ padding-bottom: 10px; 
+ }
+ 
+.section-title::before {
+    content: ''; 
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+    transform: translateX(-50%);
+	width: 50px; height: 4px; 
+	background: #007bff;
+}
+
+
+.skills {
+	padding: 60px 10%;
+}
+.skills-container { display: flex; 
+justify-content: center;
+ flex-wrap: wrap;
+ gap: 20px; 
+ }
+ 
+.skill-card {
+    background: white; 
+	padding: 25px 50px; 
+	border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: 0.3s; 
+}
+
+.skill-card:hover { transform: translateY(-10px) rotate(3deg); }
+
+
+.portfolio { 
+	padding: 60px 10%; 
+	background: #eef2f3;
+ }
+.grid-container {
+    display: grid; 
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 20px;
+}
+.grid-item {
+    background: #333;
+	color: white; 
+	height: 150px; 
+	border-radius: 10px;
+    display: flex; 
+	align-items: center; 
+	justify-content: center;
+    transition: background 0.5s; 
+}
+.grid-item:hover { background: #007bff; } 
+
+.contact { padding: 60px 10%; }
+.form-wrapper { 
+	 max-width: 500px;
+	 margin: auto;
+	 background: white;
+	 padding: 30px; 
+	 border-radius: 10px;
+}
+.input-group { margin-bottom: 15px; }
+.input-group label { 
+	 display: block;
+	 margin-bottom: 5px; 
+ }
+ 
+ 
+.input-group input {
+	width: 100%; 
+	padding: 10px; border: 1px solid #ddd;
+	border-radius: 5px; 
+}
+ 
+ 
+.btn-submit { width: 100%; 
+padding: 12px; 
+background: #007bff; 
+color: white; border: none; 
+cursor: pointer; 
+border-radius: 5px;
+ font-weight: bold; }
+
+
+
+
+</style>
+
+</body>
+</html>
